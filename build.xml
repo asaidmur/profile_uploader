@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+
+<project xmlns:ivy="antlib:org.apache.ivy.ant"  name="profile_uploader" basedir="." default="build">
+
+	<property file="build.properties" />
+
+	<path id="project-classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement path="${classes.dir}" />
+	</path>
+		
+		
+	<!-- ===================================================================
+	target: clean              
+	=================================================================== -->
+
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+	
+
+	<!-- ===================================================================
+		target: init              
+	=================================================================== -->
+
+	<target name="init" depends="clean">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.dir}/classes" />
+		<mkdir dir="${build.dir}/jars" />
+		
+		<mkdir dir="${build.dir}/dist" />
+		<mkdir dir="${build.dir}/dist/config" />
+		<mkdir dir="${build.dir}/dist/lib" />
+		<mkdir dir="${build.dir}/dist/log" />
+	</target>
+
+	
+	<!-- ===================================================================
+	target: ivy clean            
+	=================================================================== -->
+
+	<target name="ivy_clean" depends="init">
+		<delete>
+			<fileset dir="${ivy.lib.dir}" includes="**/*.*"/>
+		</delete>
+	</target>
+	
+	<!-- ===================================================================
+		target: ivy resolve          
+	=================================================================== -->
+	<!-- ivy start -->
+	<!-- ivy to get dependencies and copy to project lib folder automatically -->
+	
+	<target name="ivy_resolve" depends="ivy_clean" description="retrieve dependencies with ivy">
+		<ivy:retrieve />
+	</target>
+			
+
+	
+	<!-- ===================================================================
+	target: compile              
+	=================================================================== -->
+	
+	<target name="compile" depends="ivy_resolve" description="compile java">
+		<javac 
+			destdir="${build.dir}/classes" 
+			source="1.8" 
+			target="1.8" 
+			debug="true" 
+			deprecation="false" 
+			optimize="false" 
+			failonerror="true">
+			
+			<src path="${src.dir}" />
+			<include name="profile/**" />
+				
+			<classpath refid="project-classpath" />
+		</javac>
+	</target>
+
+	
+	
+	<!-- ===================================================================
+	target: jar              
+	=================================================================== -->
+	
+	<target name="jar" depends="compile">
+		<jar 
+			basedir="${build.dir}/classes"
+			excludes="**/.properties " 
+			destfile="${build.dir}/jars/profile_uploader.jar">
+			
+			<manifest>
+			    <attribute name="Implementation-Title" value="${impl.title}"/>
+			    <attribute name="Implementation-Version" value="${impl.version}"/> 
+			    <attribute name="Implementation-Vendor" value="${impl.vendor}"/>
+		    </manifest>			
+		</jar>
+	</target>
+	
+	
+	
+	<!-- ===================================================================
+	target: export
+	=================================================================== -->
+	
+	<target name="export" depends="jar" description="export setup">
+		
+		<copy todir="${build.dir}/dist">
+			<fileset dir="${batch.dir}">
+		    	<include name="**/*.bat"/>
+		    	<include name="**/*.sh"/>
+			</fileset>
+		</copy>
+
+		<copy todir="${build.dir}/dist/config">
+			<fileset dir="${config.dir}" includes="**" />
+		</copy>
+				
+		<copy todir="${build.dir}/dist/lib">
+			<fileset dir="${lib.dir}">
+			    	<include name="**/*.jar"/>
+			</fileset>
+			
+			<fileset dir="${build.dir}/jars">
+			    <include name="**/*.jar"/>
+			</fileset>
+		</copy>
+		
+	</target>
+
+		
+	
+	<!-- ===================================================================
+		target: zip
+	=================================================================== -->
+	
+	<target name="zip" depends="export">
+		<mkdir dir="${build.dir}/export" />
+		<zip 
+			destfile="${build.dir}/export/profile_uploader.zip"
+	       	basedir="${build.dir}/dist"
+	       	update="true"
+	  	/>	
+	</target>
+	
+	
+	
+	<!-- ===================================================================
+	target: build              
+	=================================================================== -->
+	
+	<target name="build" depends="zip" description="build project" />
+
+	
+		
+</project>

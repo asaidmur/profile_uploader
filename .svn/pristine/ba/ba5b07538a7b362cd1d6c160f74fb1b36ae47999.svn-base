@@ -1,0 +1,7 @@
+host=192.168.16.31
+port=9300
+cms_rt_skill=cms_rt_skill
+cms_profile=cms_skill
+
+cluster_name=elasticsearch
+client_transport_sniff=true

@@ -1,0 +1,20 @@
+name=profile_uploader
+
+impl.title=profile_uploader
+impl.version=1.0
+impl.vendor=calabrio
+
+
+src.dir=src
+lib.dir=build/jars
+classes.dir=${build.dir}/classes
+build.dir=build
+config.dir=config
+batch.dir=batch
+
+
+ivy.lib.dir = ${lib.dir}
+
+
+
+#ant.dir=/apps/apache-ant-1.9.6/

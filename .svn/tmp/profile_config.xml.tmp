@@ -1,0 +1,69 @@
+<configuration>
+
+<!-- 
+	<profile>
+	
+		<path>/usr/local/eclipse_workspace/profile_uploader/config/profile_config_region.csv</path>
+		
+		<keys>
+			<key_field>data_src</key_field>
+			<key_field>acd</key_field>
+			<key_field>profile_key</key_field>
+			<key_field>profile_attribute</key_field>
+			<key_field>profile_id</key_field>
+		</keys>
+		
+	</profile>
+		
+		
+	<profile>
+	
+		<path>/usr/local/eclipse_workspace/profile_uploader/config/profile_config_team.csv</path>
+		
+		<keys>
+			<key_field>data_src</key_field>
+			<key_field>acd</key_field>
+			<key_field>profile_key</key_field>
+			<key_field>profile_attribute</key_field>
+			<key_field>profile_id</key_field>
+		</keys>
+		
+	</profile>
+<<<<<<< .mine
+		 -->
+=======
+	
+	<profile>
+	
+		<path>/usr/local/eclipse_workspace/profile_uploader/config/profile_config_agent.csv</path>
+		
+>>>>>>> .r15928
+		<keys>
+			<key_field>data_src</key_field>
+			<key_field>acd</key_field>
+			<key_field>profile_key</key_field>
+			<key_field>profile_attribute</key_field>
+			<key_field>profile_id</key_field>
+		</keys>
+		
+	</profile>
+	
+	<profile>
+	
+<<<<<<< .mine
+		<path>/Users/work/eclipse-workspace/profile_uploader/config/profile_config_team2.csv</path>
+=======
+		<path>/usr/local/eclipse_workspace/profile_uploader/config/profile_config_skill.csv</path>
+>>>>>>> .r15928
+		
+		<keys>
+			<key_field>data_src</key_field>
+			<key_field>acd</key_field>
+			<key_field>profile_key</key_field>
+			<key_field>profile_attribute</key_field>
+			<key_field>profile_id</key_field>
+		</keys>
+		
+	</profile>
+	
+</configuration>

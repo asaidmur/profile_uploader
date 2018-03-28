@@ -1,0 +1,27 @@
+data_src,acd,skill,skill_name,profile_id,profile_attribute
+cms_ol,1,aux,aux_name,0,"King,Steve"
+cms_ol,1,aux,aux_name,10,Lunch
+cms_ol,1,aux,aux_name,11,Break
+cms_ol,1,aux,aux_name,12,Training
+cms_ol,1,aux,aux_name,13,Meeting
+cms_ol,1,aux,aux_name,14,Project
+cms_ol,1,aux,aux_name,15,Escalation
+cms_ol,1,aux,aux_name,16,LiveChat
+cms_ol,1,aux,aux_name,17,Logging Ticket
+cms_ol,1,aux,aux_name,18,Computer Issue
+cms_ol,1,aux,aux_name,19,Email
+cms_ol,1,aux,aux_name,20,Voicemail
+cms_ol,1,aux,aux_name,21,Customer Follow Up
+cms_ol,1,aux,aux_name,22,Open Order Follow Up
+cms_ol,1,aux,aux_name,23,WrapUp
+cms_ol,1,aux,aux_name,24,Misc
+cms_ol,1,aux,aux_name,25,Order Entry
+cms_ol,1,aux,aux_name,26,Outgoing Call
+cms_ol,1,aux,aux_name,27,Workshop
+cms_ol,1,aux,aux_name,28,LOG Department
+cms_ol,1,aux,aux_name,29,Personal
+cms_ol,1,aux,aux_name,30,Reserve 06
+cms_ol,1,aux,aux_name,31,Reserve 07
+cms_ol,1,aux,aux_name,32,Reserve 08
+cms_ol,1,aux,aux_name,33,Reserve 09
+cms_ol,1,aux,aux_name,34,Reserve 10

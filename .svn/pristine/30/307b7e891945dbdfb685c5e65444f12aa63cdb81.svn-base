@@ -1,0 +1,33 @@
+<configuration>
+
+
+	<profile>
+	
+		<path>/usr/local/workspace/profile_uploader/config/profile_config_region.csv</path>
+		
+		<keys>
+			<key_field>data_src</key_field>
+			<key_field>acd</key_field>
+			<key_field>profile_key</key_field>
+			<key_field>profile_attribute</key_field>
+			<key_field>profile_id</key_field>
+		</keys>
+		
+	</profile>
+		
+		
+	<profile>
+	
+		<path>/usr/local/workspace/profile_uploader/config/profile_config_team.csv</path>
+		
+		<keys>
+			<key_field>data_src</key_field>
+			<key_field>acd</key_field>
+			<key_field>profile_key</key_field>
+			<key_field>profile_attribute</key_field>
+			<key_field>profile_id</key_field>
+		</keys>
+		
+	</profile>
+	
+</configuration>

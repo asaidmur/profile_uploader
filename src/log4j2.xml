@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="INFO">
+
+	<Appenders>
+
+
+
+		<RollingFile name="ProfileLogger" fileName="/usr/local/workspace/broker_publisher/log/log/profile.log" filePattern="/usr/local/workspace/broker_publisher/log/log/profile_%i.log" >
+			 <PatternLayout>
+				<Pattern>%d{ISO8601},%d{UNIX_MILLIS} %-5p(%-25F:%-4L) - %m%n</Pattern>
+			</PatternLayout>
+			
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			
+			<DefaultRolloverStrategy max="20"/>
+		</RollingFile>
+
+
+
+		<Console name="ConsoleLogger" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss,SSS} %-5level %logger{36} - %msg%n" />
+		</Console>
+    
+	</Appenders>
+
+
+	<Loggers>
+	
+		<Logger name="profile" level="debug">
+      		<AppenderRef ref="ProfileLogger"/>
+    		</Logger>
+
+		<Root level="debug">
+			<AppenderRef ref="ConsoleLogger" />
+			<AppenderRef ref="ProfileLogger" />
+		</Root>
+
+	</Loggers>
+
+</Configuration>  

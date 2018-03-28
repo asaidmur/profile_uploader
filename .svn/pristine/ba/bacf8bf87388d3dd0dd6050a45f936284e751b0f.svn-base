@@ -1,0 +1,69 @@
+package profile.constants;
+
+public class EsConstants {
+
+	
+	public static final String ES_PROPERTIES="es";
+
+	
+	
+	// es constants
+	public static final String ES_HOST = "host";
+	public static final String ES_PORT = "port";
+
+	public static final String HASHED_KEY="hashed_key";
+	public static final String DELIMITTED_KEY="delimitted_key";
+
+
+	public static final String ES_INSERT="insert";
+	public static final String ES_UPDATE="update";
+	
+	
+	public static final String CLUSTER_NAME_CONFIG = "cluster.name";
+	public static final String CLUSTER_NAME = "cluster_name";
+	public static final String CLIENT_TRANSPORT_SNIFF_CONFIG = "client.transport.sniff";
+	public static final String CLIENT_TRANSPORT_SNIFF = "client_transport_sniff";
+	
+	
+	
+	
+	/*
+	public static final String ES_INDEX_SKILL = "cms_rt_skill";
+	public static final String ES_INDEX_VDN = "cms_rt_vdn";
+	public static final String ES_INDEX_AGENT = "cms_rt_agent";
+	public static final String ES_INDEX_AGENT_SKILL = "cms_rt_agent_skill";
+	public static final String ES_INDEX_AGENT_CUMULATIVE = "cms_rt_agent_cumulative";
+	public static final String ES_INDEX_ECHI = "echi";
+	public static final String ES_INDEX_HAGENT = "hagent";
+	public static final String ES_INDEX_HSPLIT = "hsplit";
+
+	public static final String ES_INDEX_TENANT = "cms_rt_tenant";
+	*/
+	
+	public static final String ES_INDEX_PROFILE = "cms_rt_profile";
+
+	
+	// es indexes
+	
+	//public static final String ES_TYPE_CMS_TENANT = "cms_tenant";
+	
+	public static final String ES_TYPE_CMS_PROFILE = "cms_profile";
+
+	/*
+	public static final String ES_TYPE_MSG_SKILL = "msg_skill";
+	public static final String ES_TYPE_MSG_VDN = "msg_vdn";
+	public static final String ES_TYPE_MSG_AGENT_CUMULATIVE = "msg_agent_cumulative";
+	public static final String ES_TYPE_MSG_AGENT = "msg_agent";
+	public static final String ES_TYPE_MSG_AGENT_SKILL = "msg_agent_skill";
+	public static final String ES_TYPE_MSG_ECHI = "msg_echi";
+	public static final String ES_TYPE_MSG_HAGENT = "msg_hagent";
+	public static final String ES_TYPE_MSG_HSPLIT = "msg_hsplit";
+
+	// es types ttl
+	public static final String TTL_EXPIRE_AFTER_SECONDS_ES_SKILL = "ttl_expire_after_seconds_skill";
+	public static final String TTL_EXPIRE_AFTER_SECONDS_ES_VDN = "ttl_expire_after_seconds_vdn";
+	public static final String TTL_EXPIRE_AFTER_SECONDS_ES_AGENT = "ttl_expire_after_seconds_agent";
+	public static final String TTL_EXPIRE_AFTER_SECONDS_ES_AGENT_SKILL = "ttl_expire_after_seconds_agent_skill";
+	public static final String TTL_EXPIRE_AFTER_SECONDS_ES_AGENT_CUMULATIVE = "ttl_expire_after_seconds_agent_cumulative";
+	*/
+}
